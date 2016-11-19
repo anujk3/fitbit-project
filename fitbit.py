@@ -16,7 +16,7 @@ class Fitbit():
     # All information must be as on the https://dev.fitbit.com/apps page.
     CLIENT_ID     = '2282F5'
     CLIENT_SECRET = '163e190578e2d587d2d337c803d40e24'
-    REDIRECT_URI  = 'http://45.55.69.105:8080/check_link'
+    REDIRECT_URI  = 'http://198.211.106.235:8080/check_link'
 
     # Decide which information the FitBit.py should have access to.
     # Options: 'activity', 'heartrate', 'location', 'nutrition',
