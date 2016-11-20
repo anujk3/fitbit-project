@@ -28,5 +28,14 @@ token = response['token']
 json.dump(token, open(tokenfile,'w'))
 
 # Do something with the response
-print response
+# print response
 print "Welcome %s!" % response['user']['displayName']
+
+output = z.ApiCall(token, apiCall="/1/user/-/activities/steps/date/today/3m.json")
+
+f = open('myfile','w')
+for check in output["activities-steps"]:
+    input_str = check["value"] + "," + check["dateTime"] + "\n"
+    f.write(input_str)
+
+f.close()  # you can omit in most cases as the destructor will call it
